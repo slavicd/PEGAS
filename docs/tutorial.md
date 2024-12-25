@@ -204,7 +204,7 @@ That is, if an engine throttles in 40-100% range, setting the slider to 50% will
 Therefore, PEGAS **must** know what is the throttle limit in order to calculate throttle commands correctly.
 
 Additionally, you have to pay attention to your vehicle's mass.
-PEGAS makes a burn time prediction based on what is the vehicle's mass, and schedules the next stage separation/ignition basing on that.
+PEGAS makes a burn time prediction based on vehicle's mass, and schedules the next stage separation/ignition based on that.
 If the actual vehicle's mass turns out to be lower than the value in the `vehicle` structure, the resulting throttle commands (which are always based on the current *measured* mass) will be smaller than predicted.
 This will cause lower than predicted fuel consumption, and consequently longer than predicted burn time - in the worst case, the next stage will separate while the current one is still burning, causing the two to collide.  
 Even something as innocent as jettisoning the payload fairings can have grave consequences if you haven't prepared your vehicle for that.
